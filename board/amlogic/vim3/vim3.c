@@ -154,6 +154,10 @@ int misc_init_r(void)
 	puts("\n==============================\n");
 	puts("OKAS U-BOOT: VIM3L ACTIVE\n");
 	puts("==============================\n");
+
+	/* Force bootdelay to 10 seconds to ensure we can access U-Boot shell */
+	env_set("bootdelay", "10");
+
 	u8 mac_addr[MAC_ADDR_LEN];
 	char efuse_mac_addr[EFUSE_MAC_SIZE], tmp[3];
 	char serial_string[EFUSE_MAC_SIZE + 1];
