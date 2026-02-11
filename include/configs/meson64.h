@@ -49,7 +49,7 @@
 
 #define BOOTENV_DEV_NAME_ROMUSB(devtypeu, devtypel, instance)	\
 		"romusb "
-
+#define CONFIG_IDENT_STRING " [OKAS-VIM3L-LOCK]"
 #ifdef CONFIG_CMD_USB
 #define BOOT_TARGET_DEVICES_USB(func) func(USB, usb, 0)
 #else
